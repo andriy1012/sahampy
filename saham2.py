@@ -3,7 +3,7 @@ import yfinance as yf
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 
-# Daftar saham Indonesia
+
 symbols = {
     "Antam": "ANTM.JK",
     "Merdeka Gold Resources": "EMAS.JK",
@@ -96,7 +96,7 @@ st.markdown(
 # refresh setiap 60 detik
 st_autorefresh(interval=60 * 1000, key="refresh")
 
-# Render tabel dengan atribut data-label dan class warna
+
 def df_to_responsive_html(df):
     thead = "".join([f"<th>{col}</th>" for col in df.columns])
     rows = ""
